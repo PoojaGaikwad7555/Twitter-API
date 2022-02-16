@@ -1,0 +1,42 @@
+
+
+<div class="container">
+    <div class="row">
+    <div class="col-md-8 mt-3">
+        <div class="input-group">
+          <input [(ngModel)]="key" type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon"/>
+          <button type="button" class="btn btn-primary mx-1" (click)="onSearch()">Search</button>
+        </div>
+        </div>
+    <div class="col-md-4 mt-3">
+        <div class="d-flex">
+         <p> Auto Refresh in {{data}} Sec</p>
+        </div>
+    </div>
+</div>
+    <hr style="color:#0d6efd; height: 3px;">
+<div class="container">
+<ng-container *ngFor="let status of statuses;">
+    <div class="card mt-3 ">
+        <div class="row">
+            <div class="col-md-1">
+               
+                <img [src]="status.user.profile_image_url" class="img-fluid">
+            </div>
+            <div class="col-md-11">
+                <p>
+                    {{status.user.id}} &nbsp;&nbsp;{{status.user.name}}&nbsp;&nbsp;{{status.user.screen_name}}&nbsp;&nbsp; {{status.created_at}}<br>
+                    <b>{{status.user.description}}</b><br>
+                    {{status.text}}
+                    
+                    <!--{{status.in_reply_to_screen_name}}
+                    {{status.source}}-->
+                </p>
+            </div>
+        </div>
+    </div>
+</ng-container>
+</div>
+
+
+
