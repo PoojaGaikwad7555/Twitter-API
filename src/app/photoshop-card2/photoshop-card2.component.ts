@@ -17,6 +17,7 @@ export class PhotoshopCard2Component implements OnInit {
     this.getData("photoshop");
     let that:any=this;
   }
+  
   getData(key:any){
     this.auth.getData(key).subscribe((data:any)=> {
       console.warn(data)

@@ -17,22 +17,17 @@ export class AdobeCard1Component implements OnInit {
 
   data: number = 30;
   key :any = ""
-  //data!:any;
-
   constructor(private auth:AuthService,private http:HttpClient,private router: Router){
 
    }
 
   ngOnInit() {
+    
+    /*by default show adobe*/
     this.getData("adobe");
     let that:any=this;
-  
-    //setTimeout(function(){
-      //location.reload();
-      console.log(that.statuses)
-     
-    //},30000);
-    const obs$ = interval(1000)
+    console.log(that.statuses)
+    const obs$ = interval(1000) //Applying setTime Interval method for refreshing component every 30 sec
     obs$.subscribe((d) => {
       this.data = this.data-1;
       if(this.data==0){
@@ -48,8 +43,7 @@ export class AdobeCard1Component implements OnInit {
     })
   }
 
-/* onSerch Method*/
-
+/* onSerch Method for filter */
   onSearch(){
    this.getData(this.key==""?"adobe":this.key);
    this.data=30; 

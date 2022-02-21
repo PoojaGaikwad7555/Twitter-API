@@ -7,8 +7,6 @@ import { AuthService} from './auth.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'twitter';
-  message= 'Auto Refresh in 30 Sec';
   constructor(private auth: AuthService){
     this.auth.getData("adobe").subscribe(data=> {
       console.warn(data)

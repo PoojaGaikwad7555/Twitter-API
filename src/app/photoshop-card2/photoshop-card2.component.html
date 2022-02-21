@@ -3,7 +3,6 @@
         <div class="card mt-3 ">
             <div class="row">
                 <div class="col-md-1">
-                   
                     <img [src]="status.user.profile_image_url" class="img-fluid">
                 </div>
                 <div class="col-md-11">
@@ -11,12 +10,9 @@
                         {{status.user.id}} &nbsp;&nbsp;{{status.user.name}}&nbsp;&nbsp;{{status.user.screen_name}}&nbsp;&nbsp; {{status.created_at}}<br>
                         <b>{{status.user.description}}</b><br>
                         {{status.text}}
-                        
-                        <!--{{status.in_reply_to_screen_name}}
-                        {{status.source}}-->
                     </p>
                 </div>
             </div>
         </div>
     </ng-container>
-    </div>
+</div>
