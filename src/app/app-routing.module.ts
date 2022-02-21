@@ -8,7 +8,9 @@ const routes: Routes = [
   { path: 'adobe-card1', component: AdobeCard1Component },
   { path: 'adobe', component: AdobeCard1Component },
   { path: 'photoshop-card2', component: PhotoshopCard2Component },
-  { path: '{{photoshop', component: PhotoshopCard2Component },
+  { path: 'photoshop', component: PhotoshopCard2Component },
+  { path: 'facebook', component: PhotoshopCard2Component },
+  { path: 'instagram', component: PhotoshopCard2Component },
   { path: '**', component: PhotoshopCard2Component },
 ];
 
